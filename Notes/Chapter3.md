@@ -346,11 +346,14 @@ w(i, j) is a probabilistic weighting scheme and I is the set of all search terms
 
 ![BM25 Calculation](./Resources/bm25.png)
 
-where cw(i,w) == combined weighting scheme, ndl(j) == normalised length of doc j, and k<sub>1</sub> and b are _experimentally determined constants_ to control the effect of tf(i,j) and the degree of length normalisation respectiely
+where 
+- cw(i,w) == combined weighting scheme 
+- ndl(j) == normalised length of doc j
+- k<sub>1</sub> and b are _experimentally determined constants_ to control the effect of tf(i,j) and the degree of length normalisation respectiely
 
-k<sub>1</sub> factor determines impact of term frequency in a document, typical value is 1.5
+    - k<sub>1</sub> factor determines impact of term frequency in a document, typical value is 1.5
 
-b determines the degree of doc length normalisation. Varies between range 0 to 1
+    - b determines the degree of doc length normalisation. Varies between range 0 to 1
 
 - with 0, no adjustment made to term weight to take into account the doc length, so cw(i,j) for term t will have higher value if j is a longer document
 - with 1, maximum application of adjustment applied. Shorter docs will have an increase in the cw(i,j) value compared to a doc of average length. Longer docs will have ndl(j) values > 1.0, so will result in a decrease of the cw val compared to document of average length.
