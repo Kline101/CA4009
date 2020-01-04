@@ -147,6 +147,14 @@ Need a data structure to mininmise the computational cost & maximise efficiency 
 
 For years the principal file structure for IR systems has been **inverted file**
 
+**Inverted File**: a data structure that _maps content to its location within a database, a doc or a set of docs._ Can be _record-based_ if just referencing the docs in which a word appears, or _word-based_ if they also include the position.
+
+Composed of:
+- **Vocab**; term list containing all distinct words found in a text
+- **Inverted List**; list of Statistics about the occurrences of each word
+
+Stores mapping of words (content) to their location in docs in which they appear.
+
 ![Inverted File Example](./Resources/Inverted-file.png)
 
 ### Storing Term Locations
